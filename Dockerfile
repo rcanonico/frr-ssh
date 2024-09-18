@@ -6,3 +6,5 @@ RUN sed -i 's#/sbin/nologin#/usr/bin/vtysh#g' /etc/passwd
 ENTRYPOINT ["/entrypoint.sh"]
 EXPOSE 22
 COPY entrypoint.sh /
+COPY frr.conf /etc/frr
+COPY vtysh.conf /etc/frr
